@@ -24,6 +24,15 @@ export function statusLabel(status: number): string {
   return `${labels[status] ?? "Unknown"} · code ${status}`;
 }
 
+/** Plain-language meaning of a pool status, from Blend's pool-management docs. */
+export function statusPlain(status: number): string {
+  if (status === 0 || status === 1) return "Working normally.";
+  if (status === 2 || status === 3) return "Borrowing is paused. Supplying is still allowed.";
+  if (status === 4 || status === 5) return "Borrowing and depositing are paused.";
+  if (status === 6) return "New pool, not open yet.";
+  return "Unknown status.";
+}
+
 export function referenceCode(code: Maybe<string>): Maybe<string> {
   if (!code) return null;
   return CODE_ALIASES[code] ?? CODE_ALIASES[code.toUpperCase()] ?? null;

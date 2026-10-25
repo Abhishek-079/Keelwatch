@@ -66,6 +66,13 @@ export default async function Home() {
       </div>
       {live && report && <p className="muted small">Fetched {new Date(report.fetchedAt).toUTCString()}. Values refresh about every minute.</p>}
 
+      <h2>New here? Three questions it answers</h2>
+      <div className="grid">
+        <div className="card"><div className="title">Is the price right?</div><p className="muted small" style={{ marginBottom: 0 }}>Lending pools trust a price feed. If it is far from the real market, someone can borrow more than they should. We compare every pool&apos;s price with independent ones.</p></div>
+        <div className="card"><div className="title">Is any money lost?</div><p className="muted small" style={{ marginBottom: 0 }}>We show bad debt, which is loans nobody repaid, and how much borrowing sits close to being liquidated.</p></div>
+        <div className="card"><div className="title">Will I hear about it?</div><p className="muted small" style={{ marginBottom: 0 }}>Join the Telegram or Discord channel and get a message when a pool crosses a warning line.</p></div>
+      </div>
+
       <h2>Why this exists</h2>
       <div className="split">
         <div className="card">

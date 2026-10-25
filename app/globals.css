@@ -135,3 +135,9 @@ ul.clean li { margin: 5px 0; }
 
 @media (max-width: 860px) { .hero { grid-template-columns: 1fr; padding-top: 24px; } nav.links { order: 3; width: 100%; justify-content: center; margin: 0; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } .stat:hover, .btn:hover { transform: none; } }
+
+.verdict { border-radius: var(--radius-sm); padding: 14px 18px; margin: 14px 0; border: 1px solid var(--line); background: var(--surface); }
+.verdict.good { border-color: rgba(61, 220, 151, 0.45); background: var(--ok-bg); }
+.verdict.mid { border-color: rgba(255, 179, 71, 0.45); background: var(--warn-bg); }
+.verdict.bad { border-color: rgba(255, 45, 63, 0.6); background: var(--crit-soft); }
+th[title] { cursor: help; text-decoration: underline dotted var(--surface-3); text-underline-offset: 4px; }
